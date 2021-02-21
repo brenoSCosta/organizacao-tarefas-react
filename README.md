@@ -8,11 +8,10 @@ Instalar dependências:
 
 Rodar o projeto em servidor de desenvolvedor
 
-### 'npm start'
+### `npm start`
 
-Run React dev server (http://localhost:3000)
-npm start
-Run the JSON server (http://localhost:5000)
-npm run server
-To build for production
-npm run build
+Rodar o server JSON (utilizado para criar uma fake API para uso no projeto)
+
+### `npm run server`
+
+Seguindo essas instruções o projeto deve rodar normalmente.
