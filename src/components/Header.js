@@ -6,9 +6,9 @@ const Header = (props) => {
     return (
         <header className='header'>
             <h1>{props.title}</h1>
-            <Button onClick= {()=>props.addTaskVisibility()}
-            
-            color='green' text='Add'/>
+            <Button onClick= {()=>props.addTaskVisibility()}           
+            color={props.btTxtAdd ? 'red' : 'green'} 
+            text={props.btTxtAdd ? 'Fechar' : 'Adicionar'}/>
         </header>
     )
 }
