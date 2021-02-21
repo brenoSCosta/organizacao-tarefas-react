@@ -2,16 +2,12 @@ import PropTypes from 'prop-types'
 import Button from './Button'
 
 const Header = (props) => {
-    const taskTemp = {
-        id: 0,
-        text: 'Ida paraBala faculdade',
-        day: '12 de março as 14h',
-        reminder: true,
-     }
+   
     return (
         <header className='header'>
             <h1>{props.title}</h1>
-            <Button 
+            <Button onClick= {()=>props.addTaskVisibility()}
+            
             color='green' text='Add'/>
         </header>
     )

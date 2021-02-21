@@ -24,9 +24,9 @@ function AddTask(props) {
 
 
     return (
-        <form className='add-form' onSubmit={onSubmit}>
+        <form style={props.visibility ? {display:'block'} : {display:'none'}} className='add-form' onSubmit={onSubmit}>
             <div className='form-control'>
-                <label>Tarefa</label>
+                <label >Tarefa</label>
                 <input type='text' placeholder='Adicione uma tarefa'
                 value={text} onChange={
                     (e) => setText(e.target.value)

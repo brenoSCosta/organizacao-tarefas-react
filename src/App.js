@@ -5,6 +5,7 @@ import { useState } from 'react'
 import AddTask from './components/AddTask'
 
 function App() {
+  const [visibilityAdd,setVisibilityAdd] = useState(false)
   const [tasks, setTasks] = useState(
     [
         {
@@ -53,11 +54,15 @@ function App() {
       }
       : task))
    }
+   
+   const addTaskVisibility =()=>{
+      setVisibilityAdd(!visibilityAdd)
+   }
 
   return (
     <div className="container">
-      <Header title='Header' />
-      <AddTask onAdd={addTask}></AddTask>
+      <Header title='Header' addTaskVisibility={addTaskVisibility}/>
+      <AddTask onAdd={addTask} visibility={visibilityAdd}></AddTask>
       {tasks.length> 0 ?
      <Tasks tasks = {tasks} onDelete={deleteTask} toogle={toggleReminder}/>
      : 'Sem tarefas'
